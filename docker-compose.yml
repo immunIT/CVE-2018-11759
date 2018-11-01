@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  client1:
+    build: client
+    ports:
+     - "8080:8080"
+
+  client2:
+    build: client
+    ports:
+     - "8081:8080"
+
+  loadbalancer:
+    build: loadbalancer
+    ports:
+     - "80:80"
